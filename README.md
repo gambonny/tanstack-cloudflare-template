@@ -1,4 +1,4 @@
-# Cloudflare App Template
+# Tanstack Start App Template
 
 An opinionated, full-stack application template wiring **TanStack Start**, **PandaCSS**, **Drizzle**, and **Better Auth**.
 Runs on **Cloudflare** with **D1** as the database.

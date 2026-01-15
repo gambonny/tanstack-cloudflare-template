@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "tanstack-cloudflare-template",
+	"compatibility_date": "2026-01-14",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"main": "@tanstack/react-start/server-entry",
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "db",
+			"database_name": "xxx",
+			"database_id": "xxx",
+			"remote": true
+		}
+	],
+	"vars": {
+		"BETTER_AUTH_URL": "http://localhost:3000"
+	}
+}

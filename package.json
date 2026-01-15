@@ -1,0 +1,40 @@
+{
+  "name": "tanstack-cloudflare-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "vite dev",
+    "build": "vite build",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && vite preview",
+    "cf-typegen": "wrangler types"
+  },
+  "keywords": [],
+  "author": "Jonny Gamba",
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.3",
+  "dependencies": {
+    "@tanstack/react-router": "^1.150.0",
+    "@tanstack/react-start": "^1.150.0",
+    "better-auth": "^1.4.12",
+    "drizzle-orm": "^0.45.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.20.3",
+    "@pandacss/dev": "^1.8.1",
+    "@types/node": "^25.0.8",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "drizzle-kit": "^0.31.8",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.4",
+    "wrangler": "^4.59.1"
+  }
+}

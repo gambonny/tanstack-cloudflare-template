@@ -1,4 +1,4 @@
-# Tanstack Start App Template
+# Cloudflare App Template
 
 An opinionated, full-stack application template wiring **TanStack Start**, **PandaCSS**, **Drizzle**, and **Better Auth**.
 Runs on **Cloudflare** with **D1** as the database.
@@ -180,20 +180,14 @@ Repeat the command for each variable above. Wrangler will prompt you for the val
 
 ### 10) Post-deploy configuration (required after first deployment)
 
-Some values depend on the final Cloudflare Worker URL and **must be updated only after the first deployment**.
+Keep production configuration in Cloudflare (or via Wrangler) to avoid multiple sources of truth.
 
-* **Production URL**: update `BETTER_AUTH_URL` in `wrangler.jsonc`.
+After the first deployment, set `BETTER_AUTH_URL` to the deployed Worker URL (for example `https://<your-app>.workers.dev`) in your Worker environment variables.
 
-  During local development, this should remain:
+For local development, keep using:
 
-  ```
-  http://localhost:3000
-  ```
+```
+BETTER_AUTH_URL=http://localhost:3000
+```
 
-  After deploying the app to Cloudflare, replace it with the assigned Worker URL, for example:
-
-  ```
-  https://<your-app>.workers.dev
-  ```
-
-  Better Auth uses this value as the canonical application origin, so it must match the deployed URL.
+Better Auth uses this value as the canonical application origin, so it must match the environment you are running against.
